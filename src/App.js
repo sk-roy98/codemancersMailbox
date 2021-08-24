@@ -1,7 +1,6 @@
 import "./App.css";
 import Search from "./Components/Search";
 import Home from "./Pages/Home";
-import MailBody from "./Pages/MailBody";
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
       </header>
       <section className="mainSection">
         <Home />
-        <MailBody />
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Home.css";
 import FilterBar from "../Components/FilterBar";
+import MailBody from "./MailBody";
 
 function Home() {
   const [mails, setMails] = useState([]);
@@ -28,7 +29,7 @@ function Home() {
         {mails &&
           mails.map((mail, index) => {
             return (
-              <div className="singleMail" key={index}>
+              <div className="singleMail" key={index}  onClick={()=><MailBody mail={mail}/>}>
                 <div className="profile">{mail.userId}</div>
                 <div className="filterIcons">
                     <img src="" alt=""/>
@@ -43,7 +44,9 @@ function Home() {
               </div>
             );
           })}
+                
       </main>
+
     </div>
   );
 }
