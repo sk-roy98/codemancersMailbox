@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Home.css";
-import FilterBar from "../Components/FilterBar";
 import MailBody from "./MailBody";
+import { BsInboxFill, BsTrashFill } from 'react-icons/bs'
+import { RiSpamFill, RiDraftFill} from 'react-icons/ri'
+import { Link, useLocation, useParams } from "react-router-dom";
+
 
 function Home() {
   const [mails, setMails] = useState([]);
@@ -24,7 +27,7 @@ function Home() {
 
   return (
     <div>
-      <FilterBar/>
+
       <main>
         {mails &&
           mails.map((mail, index) => {

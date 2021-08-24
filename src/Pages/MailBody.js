@@ -6,6 +6,7 @@ function MailBody({mail}) {
             <div>
                 <h3>{mail.subject}</h3>
                 <p>{mail.body}</p>
+                <p>Mialllll</p>
             </div>
         </div>
     )

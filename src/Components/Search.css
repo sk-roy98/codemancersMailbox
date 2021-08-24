@@ -10,7 +10,9 @@
     padding:1rem;
     padding-right: 2rem;
     position: absolute;
-    left:30.5%
+    left:30.5%;
+    color:#ccc;
+    font-size: 0.7rem;
   }
   .searchButton {
     background-color: transparent;

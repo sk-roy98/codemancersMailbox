@@ -9,32 +9,6 @@
   align-items: center;
   background-color:rgb(31, 31, 31) ;
 }
-.header {
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: #000;
-  height:4.3rem;
-  border-bottom: #303030 solid 3px;
-  border-bottom-left-radius: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-  color:#ddd
-}
-.logo{
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.logo p{
-  font-size: 1.9rem;
-  font-weight: bold;
-  color: #aaa;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 1.2px;
-  position: absolute;
-  left:3.4rem
-}
 .mainSection {
   width: 70%;
 }
