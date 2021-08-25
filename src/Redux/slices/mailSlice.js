@@ -15,7 +15,7 @@ export const mailSlice = createSlice({
     filterMails: [],
     searchedMails: [],
     status: "idle",
-    error: null
+    error: null,
   },
   reducers: {
     filterMails: (state, action) => {
@@ -28,23 +28,6 @@ export const mailSlice = createSlice({
         JSON.stringify(item).includes(action.payload)
       );
     },
-    changeTag: (state, action) => {
-      state.mails = state.mails.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, tag: action.payload.tag }
-          : item
-      );
-      state.filterMails = state.filterMails.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, tag: action.payload.tag }
-          : item
-      );
-      state.searchedMails = state.searchedMails.map((item) =>
-        item.id === action.payload.id
-          ? { ...item, tag: action.payload.tag }
-          : item
-      );
-    }
   },
   extraReducers: {
     [fetchMails.fulfilled]: (state, action) => {
@@ -52,8 +35,8 @@ export const mailSlice = createSlice({
       state.filterMails = action.payload.mails.filter(
         (mail) => mail.tag === "inbox"
       );
-    }
-  }
+    },
+  },
 });
 
 export const { filterMails, searchMails } = mailSlice.actions;

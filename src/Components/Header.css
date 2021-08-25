@@ -8,7 +8,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    color:#ddd
+    color:#ddd;
+    position: sticky;
+    top:0;
   }
   .logo{
     display: flex;

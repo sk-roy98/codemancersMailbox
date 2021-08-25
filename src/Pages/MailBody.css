@@ -21,7 +21,10 @@
     align-items:center ;
     border-radius: 50%;
     border: none;
+    cursor:pointer;
     font-size: 1.8rem;
+    font-weight: bolder;
+    color:#d22
 }
 .filterApplied{
     display: flex;

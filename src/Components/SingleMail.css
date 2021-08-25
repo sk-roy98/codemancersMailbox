@@ -26,21 +26,23 @@
   font-weight: bolder;
   color: #eee;
 }
-.filterOptions {
+.link{
+  color:#5af;
+  background-color: transparent;
+  letter-spacing: 1.2px;
+}
+.link h3{
+  letter-spacing: 3px;
+}
+.tagApplied {
   background-color: #2a2a2a;
-  width: 25%;
+  width: 23%;
+  padding: 18px 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 2rem;
   border-radius: 20rem;
-}
-.filterOptions select{
-  border: none;
-  background-color: transparent;
-  color: #ddd;
-  font-size: 1.2rem;
-  width:90%
 }
 .mailContent {
   width: calc(100% - 30%);

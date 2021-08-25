@@ -2,14 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: rgb(31, 31, 31);
 }
 .App {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   align-items: center;
   background-color: rgb(31, 31, 31);
 }
 .mainSection {
   width: 70%;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #555;
+  border-radius: 10rem;
+}
+::-webkit-scrollbar-thumb {
+  background: #a22;
+  border-radius: 100rem;
 }

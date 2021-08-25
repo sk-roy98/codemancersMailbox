@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import "./Home.css";
-import { BsInboxFill, BsTrashFill } from "react-icons/bs";
-import { RiSpamFill, RiDraftFill } from "react-icons/ri";
 import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { filterMails } from "../Redux/slices/mailSlice";
@@ -13,6 +11,7 @@ function Home() {
   const dispatch = useDispatch();
   const params = useParams();
 
+  // console.log(filteredMails);
   useEffect(() => {
     if (params.tag) {
       dispatch(filterMails(params.tag));
@@ -25,6 +24,7 @@ function Home() {
         filteredMails.map((mail, index) => {
           return (
             <Link
+              key={index}
               to={`/mail/${mail.id}`}
               style={{ width: "100%", textDecoration: "none" }}
             >
