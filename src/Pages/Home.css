@@ -1,37 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.singleMail{
-    padding:1rem;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin:1rem 0;
-    border-top: #333 solid 1px;
-    box-shadow: 0 10px 10px -10px rgba(0,0,0,0.7);
-}
-.profile{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: #C4241E;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    color:#eee
-}
-.filterIcons {
-    background-color: #2a2a2a;
-    width:25%;
-    height:2rem;
-    border-radius: 20rem;
-}
-.mailContent{
-    width: calc(100% - 30%);
-    color:#ddd
+main{
+    width:70%
 }

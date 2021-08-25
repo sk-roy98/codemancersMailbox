@@ -1,56 +1,38 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useEffect } from "react";
 import "./Home.css";
-import MailBody from "./MailBody";
-import { BsInboxFill, BsTrashFill } from 'react-icons/bs'
-import { RiSpamFill, RiDraftFill} from 'react-icons/ri'
-import { Link, useLocation, useParams } from "react-router-dom";
-
+import { BsInboxFill, BsTrashFill } from "react-icons/bs";
+import { RiSpamFill, RiDraftFill } from "react-icons/ri";
+import { Link, useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { filterMails } from "../Redux/slices/mailSlice";
+import SingleMail from "../Components/SingleMail";
 
 function Home() {
-  const [mails, setMails] = useState([]);
+  const filteredMails = useSelector((state) => state.mailReducer.filterMails);
 
-  const fetchMails = async () => {
-    const api = "https://run.mocky.io/v3/58770279-0738-4578-a1cf-c56a193fce98";
-    try {
-      const data = await axios.get(api);
-      console.log(data.data);
-      setMails(data.data);
-    } catch (err) {
-      console.log("error", err);
-    }
-  };
+  const dispatch = useDispatch();
+  const params = useParams();
 
   useEffect(() => {
-    fetchMails();
-  }, []);
+    if (params.tag) {
+      dispatch(filterMails(params.tag));
+    }
+  }, [params]);
 
   return (
-    <div>
-
-      <main>
-        {mails &&
-          mails.map((mail, index) => {
-            return (
-              <div className="singleMail" key={index}  onClick={()=><MailBody mail={mail}/>}>
-                <div className="profile">{mail.userId}</div>
-                <div className="filterIcons">
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                </div>
-                <div className="mailContent">
-                  <h4>{mail.subject.slice(0, 20)}..</h4>
-                  <p>{mail.body.slice(0, 90)}...</p>
-                </div>
-              </div>
-            );
-          })}
-                
-      </main>
-
-    </div>
+    <main>
+      {filteredMails &&
+        filteredMails.map((mail, index) => {
+          return (
+            <Link
+              to={`/mail/${mail.id}`}
+              style={{ width: "100%", textDecoration: "none" }}
+            >
+              <SingleMail mail={mail} key={index} />
+            </Link>
+          );
+        })}
+    </main>
   );
 }
 

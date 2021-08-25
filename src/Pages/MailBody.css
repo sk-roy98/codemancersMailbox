@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mailBodyHead{
+    margin:1.5rem 0;
+}
+.actionTab{
+    width:100%;
+    margin:1rem 0;
+    padding:0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.backButton{
+    background-color: #ddd;
+    padding:0.1rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.8rem;
+}
+.filterApplied{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9BD05;
+    border-radius: 2rem;
+}
+.filterApplied p{
+    font-size:1.1rem;
+    padding: 0.1rem 1rem;
+    background-color: transparent;
+}
+.mailBodyText{
+    background-color: #333;
+    padding: 1rem;
+    min-height:20rem;
+}
+.mailBodyText p{
+    background-color: transparent;
+}

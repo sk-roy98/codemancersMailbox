@@ -8,7 +8,7 @@ function FilterBar() {
       <Link
         to="/inbox"
         className="filterButtons"
-        style={{ backgroundColor: "#32A853" }}
+        style={{ backgroundColor: "#32A853", textDecoration:"none", fontWeight:"bold", color:"#333" }}
       >
         Inbox
       </Link>
@@ -16,7 +16,7 @@ function FilterBar() {
       <Link
         to="/all"
         className="filterButtons"
-        style={{ backgroundColor: "#3F87F6" }}
+        style={{ backgroundColor: "#3F87F6", textDecoration:"none", fontWeight:"bold", color:"#333" }}
       >
         All
       </Link>
@@ -24,7 +24,7 @@ function FilterBar() {
       <Link
         to="/draft"
         className="filterButtons"
-        style={{ backgroundColor: "#F9BD05" }}
+        style={{ backgroundColor: "#F9BD05", textDecoration:"none", fontWeight:"bold", color:"#333" }}
       >
         Draft
       </Link>
@@ -32,7 +32,7 @@ function FilterBar() {
       <Link
         to="/spam"
         className="filterButtons"
-        style={{ backgroundColor: "#EA4436" }}
+        style={{ backgroundColor: "#EA4436", textDecoration:"none", fontWeight:"bold", color:"#333" }}
       >
         Spam
       </Link>
@@ -40,7 +40,7 @@ function FilterBar() {
       <Link
         to="/trash"
         className="filterButtons"
-        style={{ backgroundColor: "#C4241E" }}
+        style={{ backgroundColor: "#C4241E", textDecoration:"none", fontWeight:"bold", color:"#333" }}
       >
         Trash
       </Link>

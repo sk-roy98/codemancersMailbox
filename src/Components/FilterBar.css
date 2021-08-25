@@ -5,12 +5,15 @@
 }
 .filters {
     display: flex;
-    width:100%;
+    width:70%;
     height:3.5rem;
     padding:10;
     margin: 10 0;
 }
 .filterButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex:1;
     border:none;
     font-size: 1.3rem;
