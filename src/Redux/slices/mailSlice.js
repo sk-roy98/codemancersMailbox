@@ -13,9 +13,7 @@ export const mailSlice = createSlice({
   initialState: {
     mails: [],
     filterMails: [],
-    searchedMails: [],
-    status: "idle",
-    error: null,
+    searchedMails: []
   },
   reducers: {
     filterMails: (state, action) => {
@@ -25,7 +23,15 @@ export const mailSlice = createSlice({
     },
     searchMails: (state, action) => {
       state.searchedMails = state.mails.filter((item) =>
-        JSON.stringify(item).includes(action.payload)
+        // JSON.stringify(item).includes(action.payload)
+        {
+          for(let key in item){
+            if (JSON.stringify(item[key]).includes(action.payload)){
+              return true
+            }
+          }
+          return false
+        }
       );
     },
   },
