@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const fetchMails = createAsyncThunk("posts/fetchMails", async () => {
+export const fetchMails = createAsyncThunk("mails/fetchMails", async () => {
   const res = await axios.get(
     "https://run.mocky.io/v3/58770279-0738-4578-a1cf-c56a193fce98"
   );
